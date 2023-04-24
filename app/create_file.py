@@ -24,16 +24,16 @@ def create_file() -> None:
         else:
             file_path = command[command.index("-f") + 1]
 
-            with open(file_path, "a") as file:
-                file.write(datetime.now().strftime("%Y-%m-%d %H:%M:%S \n"))
-                count_line = 0
-                while True:
-                    enter_line = input("Enter content line: ")
-                    count_line += 1
-                    if enter_line == "stop":
-                        break
-                    file.write(f"{count_line} {enter_line}\n")
-                file.write("\n")
+        with open(file_path, "a") as file:
+            file.write(datetime.now().strftime("%Y-%m-%d %H:%M:%S \n"))
+            count_line = 0
+            while True:
+                enter_line = input("Enter content line: ")
+                count_line += 1
+                if enter_line == "stop":
+                    break
+                file.write(f"{count_line} {enter_line}\n")
+            file.write("\n")
 
 
 create_file()

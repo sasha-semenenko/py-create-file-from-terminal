@@ -33,6 +33,7 @@ def create_file() -> None:
                     if enter_line == "stop":
                         break
                     file.write(f"{count_line} {enter_line}\n")
+                file.write("\n")
 
 
 create_file()
